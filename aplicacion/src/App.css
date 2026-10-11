@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+body, html {
+  width: 100%;
+  min-height: 100%; /* solo ocupa lo necesario */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff, #f3e8ff);
+  display: flex;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Contenedor principal donde van tus componentes */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* asegura que el footer quede al final si hay poco contenido */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* === Header === */
+.header {
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  color: #4f46e5;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.auth-buttons {
+  gap: 1rem;
+}
+
+.btn-outline {
+  border: 1px solid #4f46e5;
+  color: #4f46e5;
+  background: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: #e0e7ff;
+}
+
+.btn-primary {
+  background-color: #4f46e5;
+  color: #4f46e5;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #4338ca;
+}
+.main-content {
+  flex: 1; /* ocupa el espacio disponible entre header y footer */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start; /* no fuerza al centro */
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+/* === FOOTER === */
+.footer {
+  padding: 1rem 0; /* equivalente a py-8 */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
-.App-link {
-  color: #61dafb;
+.footer-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  text-align: center;
+  color: #333435; /* texto gris medio */
+  font-size: 0.95rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

@@ -1,0 +1,263 @@
+/* CONTENEDOR GENERAL */
+/* .recurso-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f4f6fc;
+} */
+
+/* TARJETA PRINCIPAL */
+.recurso-card {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* MEDIA (IMAGEN - VIDEO - PDF) */
+.recurso-media-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+
+}
+
+/* Cualquier recurso visual */
+.recurso-media {
+  width: 100%;
+  max-width: 850px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.25);
+}
+
+/* YOUTUBE y PDF: relación de aspecto responsiva */
+.recurso-media.video,
+.recurso-media.pdf {
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+/* IMÁGENES */
+.recurso-media img {
+  object-fit: contain;
+}
+
+/* AUDIO */
+.recurso-audio {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* CONTENIDO */
+.recurso-content {
+  padding: 25px;
+}
+
+.recurso-titulo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.recurso-descripcion {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* BADGES */
+.recurso-badges {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+/* COLORES DE BADGES */
+.dificultad.básico {
+  background: #4caf50;
+}
+
+.dificultad.intermedio {
+  background: #ff9800;
+}
+
+.dificultad.dificil {
+  background: #e53935;
+}
+
+.tipo {
+  background: #3f51b5;
+}
+
+.materia {
+  background: #009688;
+}
+
+/* BOTONES */
+.bloqueado {
+  background-color: #9aa0b8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btn-evaluacion {
+  margin-top: 25px;
+  padding: 12px 18px;
+  width: 100%;
+  background: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-evaluacion:hover {
+  background: #3f4ba8;
+}
+
+.btn-volver {
+  height: 20%;
+  width: 20%;
+  background: #ddd;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+.btn-volver:hover {
+  background: #ccc;
+}
+
+/* ENLACE EXTERNO */
+.btn-external {
+  background: #673ab7;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================
+      SIDEBAR LATERAL
+============================ */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 230px;
+  background: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 15px 10px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+  z-index: 999;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sidebar-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.toggle-btn {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 1rem;
+  color: #333;
+}
+
+.sidebar-item:hover {
+  background: #f3f3f3;
+}
+
+.sidebar-item .icon {
+  font-size: 1.3rem;
+  width: 35px;
+}
+
+.sidebar-item .text {
+  white-space: nowrap;
+}
+
+.logout {
+  margin-top: 40px;
+  color: #d9534f;
+}
+
+.logout:hover {
+  background: #fae2e2;
+}
+
+/* Ajuste del contenido principal por el sidebar */
+.progreso-container {
+  margin-left: 240px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed ~ .progreso-container {
+  margin-left: 80px;
+}

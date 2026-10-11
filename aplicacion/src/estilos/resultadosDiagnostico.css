@@ -1,0 +1,183 @@
+.rd-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.rd-container-center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rd-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 25px;
+}
+
+.rd-main-card {
+  text-align: center;
+}
+
+.rd-score-box {
+  margin: 20px 0;
+}
+
+.rd-score {
+  font-size: 48px;
+  font-weight: bold;
+  color: #0072ff;
+}
+
+.rd-score-message {
+  color: #555;
+}
+
+.rd-progress-box {
+  margin-top: 20px;
+}
+
+progress {
+  width: 100%;
+  height: 20px;
+}
+
+.rd-stats-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.rd-small-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.rd-stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.rd-answer-item {
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+.rd-correct {
+  background: #e6f7e6;
+  border-color: #7bc47f;
+}
+
+.rd-wrong {
+  background: #ffecec;
+  border-color: #e57373;
+}
+
+.rd-explanation {
+  font-style: italic;
+  color: #666;
+  margin-top: 10px;
+}
+
+.rd-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.rd-btn {
+  background: #0072ff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.rd-btn:hover {
+  background: #005dd4;
+}
+
+/* ============================
+      SIDEBAR LATERAL
+============================ */
+/* Menú lateral */
+.sidebar {
+  width: 70px; /* CERRADO */
+  background-color: #ffffff;
+  color: black;
+  padding: 20px 10px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  transition: width 0.3s ease;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* Sidebar abierto */
+.sidebar.open {
+  width: 240px;
+}
+
+/* Botón toggle */
+.sidebar-toggle {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  background: white;
+  border: none;
+  width: 40px;
+  height: 35px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Título */
+.sidebar h2 {
+  margin: 50px 0 20px;
+  font-size: 22px;
+  white-space: nowrap;
+}
+
+/* Lista */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Ítems */
+.sidebar li {
+  padding: 12px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+
+.sidebar li:hover {
+  background-color: #7fb4df;
+  border-radius: 6px;
+}
+
+/* 🔥 OCULTAR TEXTO CUANDO ESTÁ CERRADO */
+.sidebar:not(.open) ul span {
+  display: none;
+}
+
+.sidebar:not(.open) li {
+  cursor: default;
+}

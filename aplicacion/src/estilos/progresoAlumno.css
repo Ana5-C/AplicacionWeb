@@ -1,0 +1,439 @@
+/* ================================
+   ESTRUCTURA GENERAL
+================================ */
+.progress-page {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background: #f8f9ff;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  transition: margin-left 0.3s ease;
+}
+
+/* ================================
+   HEADER 
+================================ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-text h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #1e1e2f;
+}
+
+.header-text p {
+  color: #555;
+  margin-top: 5px;
+}
+
+.back-button button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #4f46e5;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ================================
+   STAT CARDS GRID
+================================ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-large {
+  width: 40px;
+  height: 40px;
+}
+
+.primary {
+  color: #4f46e5;
+}
+
+.accent {
+  color: #10b981;
+}
+
+.stat-value {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.stat-label {
+  margin-top: -4px;
+  color: #666;
+}
+
+/* ================================
+   SCORE COLORS
+================================ */
+.score-high {
+  color: #10b981;
+}
+
+.score-medium {
+  color: #f59e0b;
+}
+
+.score-low {
+  color: #ef4444;
+}
+
+/* ================================
+   PROGRESO GENERAL
+================================ */
+.progress-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4f46e5;
+  transition: width 0.3s ease-in-out;
+}
+
+/* ================================
+   TESTS GRID
+================================ */
+.tests-grid {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 15px;
+}
+
+.test-card {
+  background: #f3f4ff;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid #4f46e5;
+}
+
+.test-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ================================
+   BADGES
+================================ */
+.badge {
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  background: #9ca3af;
+  color: white;
+  border-radius: 6px;
+}
+
+.badge.approved {
+  background: #10b981 !important;
+}
+
+.badge.not-approved {
+  background: #ef4444 !important;
+}
+
+/* ================================
+   ACTIVIDADES RECIENTES
+================================ */
+.empty-state {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  /* centrar */
+  border-left: 4px solid #4f46e5;
+
+}
+
+.icon-large {
+  margin: 0 auto;
+}
+
+.button-explore {
+  padding: 5px 14px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.2s ease;
+}
+
+.activity-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 columnas */
+  gap: 16px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  /* centrar */
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9ff;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border-left: 4px solid #4f46e5;
+}
+
+.activity-info h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.activity-info p {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Score + badges + boton */
+.activity-score {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* ================================
+   BOTÓN "VER RESULTADOS"
+================================ */
+.result-button {
+  padding: 5px 14px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.2s ease;
+}
+
+.result-button:hover {
+  background: #4338ca;
+}
+
+@media (max-width: 750px) {
+  .activity-list {
+    grid-template-columns: 1fr;
+    /* 1 columna en móvil */
+  }
+}
+
+
+.dashboard-panel {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-panel h3 {
+  margin-bottom: 5px;
+}
+
+.dashboard-section {
+  margin-top: 1.5rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge.success {
+  background: #d1f7c4;
+  color: #2b7a0b;
+}
+
+.badge.primary {
+  background: #cce4ff;
+  color: #094a8f;
+}
+
+.badge.accent {
+  background: #ffe6b3;
+  color: #a15c00;
+}
+
+.badge.muted {
+  background: #f0f0f0;
+  color: #555;
+}
+
+
+/* ================================
+   LOGROS + ÁREAS DE MEJORA EN 2 COLUMNAS
+================================ */
+.dashboard-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.dashboard-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-section h4 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.dashboard-section ul {
+  margin-left: 15px;
+  color: #444;
+}
+
+/* En móvil: una sola columna */
+@media (max-width: 750px) {
+  .dashboard-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================
+      SIDEBAR LATERAL
+============================ */
+/* Menú lateral */
+.sidebar {
+  width: 70px; /* CERRADO */
+  background-color: #ffffff;
+  color: black;
+  padding: 20px 10px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  transition: width 0.3s ease;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* Sidebar abierto */
+.sidebar.open {
+  width: 240px;
+}
+
+/* Botón toggle */
+.sidebar-toggle {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  background: white;
+  border: none;
+  width: 40px;
+  height: 35px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Título */
+.sidebar h2 {
+  margin: 50px 0 20px;
+  font-size: 22px;
+  white-space: nowrap;
+}
+
+/* Lista */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Ítems */
+.sidebar li {
+  padding: 12px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+
+.sidebar li:hover {
+  background-color: #7fb4df;
+  border-radius: 6px;
+}
+
+/* 🔥 OCULTAR TEXTO CUANDO ESTÁ CERRADO */
+.sidebar:not(.open) ul span {
+  display: none;
+}
+
+.sidebar:not(.open) li {
+  cursor: default;
+}
+

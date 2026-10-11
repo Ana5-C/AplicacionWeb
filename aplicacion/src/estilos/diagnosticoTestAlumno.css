@@ -1,0 +1,241 @@
+/* Estilos generales */
+.diagnostico-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    margin: 10px auto;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Botón de Volver (ahora fuera del contenedor) */
+.diagnostico-btn-back {
+    background-color: #ffffff;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+/* Header */
+.diagnostico-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.diagnostico-header h2 {
+    margin: 10px 0;
+    color: #333333;
+}
+
+.diagnostico-header p {
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Barra de progreso */
+.diagnostico-progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.diagnostico-progress {
+    height: 100%;
+    background-color: #286aa7;
+    transition: width 0.3s ease;
+}
+
+/* Card de pregunta */
+.diagnostico-card {
+    margin-top: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.diagnostico-card h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Opciones */
+.diagnostico-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.diagnostico-option {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.diagnostico-option:hover {
+    background-color: #f2f2f2;
+}
+
+.diagnostico-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Navegación */
+.diagnostico-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.diagnostico-btn-outline {
+    background: white;
+    border: 2px solid #007bff;
+    color: #007bff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.diagnostico-btn-outline:hover:not(:disabled) {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.diagnostico-btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.diagnostico-btn-primary:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.diagnostico-btn-outline:disabled,
+.diagnostico-btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Frase final */
+.note-diagnostico {
+    font-style: italic;
+    color: #666;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* ============================
+      SIDEBAR LATERAL
+============================ */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 230px;
+  background: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 15px 10px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+  z-index: 999;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sidebar-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.toggle-btn {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 1rem;
+  color: #333;
+}
+
+.sidebar-item:hover {
+  background: #f3f3f3;
+}
+
+.sidebar-item .icon {
+  font-size: 1.3rem;
+  width: 35px;
+}
+
+.sidebar-item .text {
+  white-space: nowrap;
+}
+
+.logout {
+  margin-top: 40px;
+  color: #d9534f;
+}
+
+.logout:hover {
+  background: #fae2e2;
+}
+
+/* Ajuste del contenido principal por el sidebar */
+.progreso-container {
+  margin-left: 240px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed ~ .progreso-container {
+  margin-left: 80px;
+}

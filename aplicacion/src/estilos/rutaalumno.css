@@ -1,0 +1,262 @@
+/* Contenedor general */
+.lp-container-modern {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.lp-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.lp-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.lp-header p {
+  color: #666;
+}
+
+.lp-back-btn {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.2s;
+}
+.lp-back-btn:hover {
+  background: #2563eb;
+}
+
+
+/* Roadmap timeline */
+.lp-timeline {
+  position: relative;
+  padding-left: 20px;
+}
+
+.lp-step {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.lp-line {
+  position: absolute;
+  left: 25px;
+  top: 50px;
+  width: 3px;
+  height: calc(100% - 20px);
+  background: #d6d6d6;
+  border-radius: 4px;
+}
+
+/* CARD */
+.lp-card-modern {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 22px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #3b82f6; /* azul */
+  transition: transform 0.2s;
+}
+
+.lp-card-modern:hover {
+  transform: translateY(-4px);
+}
+
+/* Locked */
+.lp-locked {
+  opacity: 0.6;
+  border-left-color: #9ca3af !important;
+}
+
+/* Completed */
+.lp-completed {
+  border-left-color: #10b981 !important; /* verde */
+}
+
+.lp-card-header-modern {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.lp-card-header-modern h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.lp-icon {
+  font-size: 2rem;
+}
+
+.lp-difficulty-modern {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Description */
+.lp-description-modern {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Progress */
+.lp-progress-container {
+  margin-bottom: 20px;
+}
+
+.lp-progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.lp-progress-bar-modern {
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.lp-progress-fill-modern {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 10px;
+}
+
+/* Botón moderno */
+.lp-btn-modern {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.lp-btn-modern:hover {
+  background: #2563eb;
+}
+
+/* Botón bloqueado */
+.lp-btn-locked {
+  width: 100%;
+  padding: 10px;
+  background: #9ca3af;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* ============================
+      SIDEBAR LATERAL
+============================ */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 230px;
+  background: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 15px 10px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+  z-index: 999;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sidebar-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.toggle-btn {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 1rem;
+  color: #333;
+}
+
+.sidebar-item:hover {
+  background: #f3f3f3;
+}
+
+.sidebar-item .icon {
+  font-size: 1.3rem;
+  width: 35px;
+}
+
+.sidebar-item .text {
+  white-space: nowrap;
+}
+
+.logout {
+  margin-top: 40px;
+  color: #d9534f;
+}
+
+.logout:hover {
+  background: #fae2e2;
+}
+
+/* Ajuste del contenido principal por el sidebar */
+.progreso-container {
+  margin-left: 240px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed ~ .progreso-container {
+  margin-left: 80px;
+}
